@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body bgcolor="#E7F2F8">
+    <center>
+        <h1><font face="Arial" color="blue">Sigma</font><font face="Arial" color="red">Calculator</font></h1>
+        
+        <table bgcolor="white" border="3" cellpadding="30" cellspacing="10">
+            <tr>
+                <td align="center">
+                    <form oninput="result.value = (
+                        op.value === '+' ? (Number(num1.value) + Number(num2.value)) :
+                        op.value === '-' ? (Number(num1.value) - Number(num2.value)) :
+                        op.value === '*' ? (Number(num1.value) * Number(num2.value)) :
+                        op.value === '/' ? (Number(num1.value) / Number(num2.value)) : ''
+                    )">
+                        <input type="number" name="num1" id="num1" placeholder="First Number">
+                        <input type="number" name="num2" id="num2" placeholder="Second Number">
+                        <br><br>
+
+                        <label><input type="radio" name="op" value="+" checked> <b><font color="blue">Add</font></b></label>
+                        <label><input type="radio" name="op" value="-"> <b><font color="red">Subtract</font></b></label>
+                        <label><input type="radio" name="op" value="*"> <b><font color="blue">Multiply</font></b></label>
+                        <label><input type="radio" name="op" value="/"> <b><font color="red">Divide</font></b></label>
+
+                        <br><br>
+                        
+                        <br><br>
+
+                        <h2><font color="red">Result: </font><output name="result" for="num1 num2"><font color="green"><b><font color="blue">0</font></b></font></output></h2>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
